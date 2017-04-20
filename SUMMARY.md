@@ -11,3 +11,4 @@
 * [Services](/docs/services/README.md)
 * [Componentes](/docs/componentes/README.md)
   * [Form](/docs/componentes/Form.md)
+* [Store de redux](/docs/store/README.md)
