@@ -1,7 +1,5 @@
 # APIS
-Esta sección se encuentra en src/api.
-Clases que heredan de Request. La clase Request contiene los atributos y métodos para realizar una petición con Axios.
-La definición de los métodos que una clase api debe tener son:
+Esta sección se encuentra en src/api. Clases que heredan de Request. La clase Request contiene los atributos y métodos para realizar una petición con Axios. La definición de los métodos que una clase api debe tener son:
     
 * get(): Solicita un array de registros. 
 * getById(): Solicita un registro que cumpla el identificador. 

@@ -1,6 +1,5 @@
 # Form
-Este componente pinta inputs. Requiere la definición de un formulario dado en el store de redux 
-y una función para manejar el evento OnChange de cada input. Inputs disponibles:
+Este componente pinta inputs. Requiere la definición de un formulario dado en el store de redux y una función para manejar el evento OnChange de cada input. Inputs disponibles:
 
 * Texto
 * Select

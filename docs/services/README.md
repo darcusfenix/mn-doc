@@ -1,7 +1,5 @@
 # SERVICES
-Esta sección se encuentra en src/services. Carpeta que contiene clases con metodos estáticos para utilizar en
-cualquier container/componente en la spa. Objetivo de uso: reducir código. Cada método requiere la función dispatch
-que redux proporciona en el componente.
+Esta sección se encuentra en src/services. Carpeta que contiene clases con metodos estáticos para utilizar en cualquier container/componente en la spa. Objetivo de uso: reducir código. Cada método requiere la función dispatch que redux proporciona en el componente.
 ```
 .
 ├── /.idea                          #     

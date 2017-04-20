@@ -1,5 +1,5 @@
 # CONSTANTS
-    Esta sección se encuentra en src/constants. Carpeta que contiene archivos como constantes.
+Esta sección se encuentra en src/constants. Carpeta que contiene archivos como constantes.
 ```
 .
 ├── /.idea                          #     
