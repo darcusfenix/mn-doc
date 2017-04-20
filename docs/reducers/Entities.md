@@ -9,46 +9,46 @@ entitiesReducer = (state = store.entities, action) => {
     const {entitie, value, type, index, property} = action;
 
     switch (type) {
-
-        case ACTION_ENTITIES_LIST:
-
-            return update(state, {
-                [entitie]: {
-                    "$set": value
-                }
-            });
-        case ACTION_ENTITIES_LIST_PUSH:
-
-            return update(state, {
-                    [entitie]: {
-                        "$push": [action.object]
-                    }
-                }
-            );
-        case ACTION_ENTITIES_LIST_REMOVE:
-
-            return update(state, {
-                [entitie]: {
-                    "$splice": [[index, 1]]
-                }
-            });
-        case ACTION_ENTITIES_SET_ATTR:
-
-            const collection = state[entitie],
-                element = collection[index];
-
-            return update(state, {
-                [entitie]: {
-                    [index]: {
-                        [property]: {
-                            "$set": element[property] ? "0" : "1"
+    
+                case ACTION_ENTITIES_LIST:
+    
+                    return update(state, {
+                        [entitie]: {
+                            "$set": value
                         }
-                    }
-                }
-            });
-        default:
-            return state;
-    }
+                    });
+    
+                case ACTION_ENTITIES_LIST_PUSH:
+    
+                    return update(state, {
+                        [entitie]: {
+                            "$push": [action.object]
+                        }
+                    });
+    
+                case ACTION_ENTITIES_LIST_REMOVE:
+    
+                    return update(state, {
+                        [entitie]: {
+                            "$splice": [[index, 1]]
+                        }
+                    });
+    
+                case ACTION_ENTITIES_SET_ATTR:
+    
+                    return update(state, {
+                        [entitie]: {
+                            [index]: {
+                                [property]: {
+                                    "$set": value
+                                }
+                            }
+                        }
+                    });
+    
+                default:
+                    return state;
+            }
 
 }
 
@@ -77,7 +77,7 @@ this.request().then((response) => {
 
 ```
 
-### Propiedades para el dispatch de ACTION_ENTITIES_LIST
+### Propiedades dispatch de ACTION_ENTITIES_LIST
 
 | nombre    | tipo              | descripción                   |
 |---------- |------------------ |-------------------------------|
@@ -104,13 +104,13 @@ addUser (dispatch) => {
 
 ```
 
-### Propiedades para el dispatch de ACTION_ENTITIES_LIST_PUSH
+### Propiedades dispatch de ACTION_ENTITIES_LIST_PUSH
 
 | nombre    | tipo              | descripción                   |
 |---------- |------------------ |-------------------------------|
 | type *    | string            | Constante de la acción        |
 | entitie * | string            | Entidad del store a la que se agregará un objeto al array actual|
-| object *  | object            | Nuevo object a agregar  |
+| object *  | object            | Nuevo objeto a agregar  |
 
 
 
@@ -133,7 +133,7 @@ removeUser (dispatch, index) => {
 
 ```
 
-### Propiedades para el dispatch de ACTION_ENTITIES_LIST_REMOVE
+### Propiedades dispatch de ACTION_ENTITIES_LIST_REMOVE
 
 | nombre    | tipo              | descripción                   |
 |---------- |------------------ |-------------------------------|
@@ -153,7 +153,7 @@ updateUser (dispatch, index) => {
     this.request().then((response) => {
        dispatch({
            "type": ACTION_ENTITIES_SET_ATTR,
-           "property": "activo",
+           "property": "estatus",
            "entitie": "usuarios",
            "index": index,
            "value": false
@@ -164,7 +164,7 @@ updateUser (dispatch, index) => {
 
 ```
 
-### Propiedades para el dispatch de ACTION_ENTITIES_SET_ATTR
+### Propiedades dispatch de ACTION_ENTITIES_SET_ATTR
 
 | nombre    | tipo              | descripción                   |
 |---------- |------------------ |-------------------------------|
