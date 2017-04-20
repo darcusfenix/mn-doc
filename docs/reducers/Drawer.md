@@ -17,9 +17,18 @@ drawerReducer = (state = store.widgets.drawer.open, action) => {
 
 ```
 
+### Acciones
+| Caso                          | retorno               | descripción                   |
+|-------------------------------|-----------------------|-------------------------------|
+| ACTION_MAIN_DRAWER_TOGGLE     | boolean               | Cambia el valor de la propieda open en el menú        |
+
+
 ### Ejemplo de uso:
 
 ```javascript
+
+// ACTION_MAIN_DRAWER_TOGGLE
+
 import * as type from "./store/actions";
 
 const accion = () => {
@@ -36,7 +45,7 @@ const accion = () => {
     }
 ```
 
-### Propiedades para el dispatch
+### Propiedades del dispatch
 
 | nombre    | tipo              | descripción                   |
 |---------- |------------------ |-------------------------------|
