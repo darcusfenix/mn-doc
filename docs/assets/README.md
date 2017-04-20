@@ -1,6 +1,6 @@
 # ASSETS
-    Esta sección se encuentra en src/assets. Carpeta que contiene los recursos estáticos que utiliza la spa.
-    Imágenes y estilos CSS.
+Esta sección se encuentra en src/assets. Carpeta que contiene los recursos estáticos que utiliza la spa.
+Imágenes y estilos CSS.
 ```
 .
 ├── /.idea                          #     
